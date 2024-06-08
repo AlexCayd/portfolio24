@@ -1,0 +1,169 @@
+/* Conexión a Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --fuenteTitulos: 'Playfair Display', serif;
+    --fuenteGeneral: 'Open Sans', sans-serif;
+
+    --blanco: #ffffff;
+    --gris: #ebebeb;
+    --negro: #191919;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+}
+
+a {
+    color: var(--negro);
+    text-decoration: none;
+}
+
+.contenedor {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.boton {
+    padding: 15px 50px;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--negro);
+    position: relative;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: .5s;
+}
+
+.boton:hover {
+    border: 2px solid var(--negro);
+}
+
+.boton::before {
+    content: '';
+    position: absolute;
+    inset: 0 8px;
+    border-left: 2px solid var(--negro);
+    border-right: 2px solid var(--negro);
+    transition: 1s;
+}
+
+.boton::after {
+    content: '';
+    position: absolute;
+    inset: 8px 0;
+    border-top: 2px solid var(--negro);
+    border-bottom: 2px solid var(--negro);
+    transition: 1s;
+}
+
+.boton:hover::before {
+    inset: 0 -12px;
+    transform: skewY(15deg);
+}
+
+.boton:hover::after {
+    inset: -12px 0;
+    transform: skewX(15deg);
+}
+
+/* Header */
+@media screen and (min-width: 768px) {
+    .header__contenedor {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+}
+
+.header__logocontenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.header__logoimg {
+    width: 50px;
+}
+
+.header__logotxt {
+    font-size: 32px;
+}
+
+.header__titulo {
+    display: flex;
+    align-items: center; 
+}
+
+
+.header__texto {
+    font-size: 85px;
+    width: 600px;
+    line-height: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+    .header__texto {
+        font-size: 150px;
+        line-height: 1;
+        margin-top: -20px;
+    }
+}
+
+.header__flecha {
+    width: 150px; 
+    margin-top: -150px;
+}
+
+.header__boton {
+    margin-top: 30px;
+}
+
+.header__botoncontenedor {
+    width: 250px;
+}
+
+/* Menú */
+.nav {
+    margin-top: 125px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav__enlace {
+    position: relative; 
+    display: inline-block; 
+}
+
+.nav__enlace::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--negro); 
+    transition: width .5s; 
+}
+
+.nav__enlace:hover::before {
+    width: 100%;
+}
