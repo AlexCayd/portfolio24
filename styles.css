@@ -83,7 +83,7 @@ a {
 }
 
 /* Header */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1092px) {
     .header__contenedor {
         display: flex;
         justify-content: space-between;
@@ -104,7 +104,13 @@ a {
 }
 
 .header__logotxt {
-    font-size: 32px;
+    font-size: 24px;
+}
+
+@media screen and (min-width: 1092px) {
+    .header__logotxt {
+        font-size: 32px;
+    }
 }
 
 .header__titulo {
@@ -114,12 +120,13 @@ a {
 
 
 .header__texto {
-    font-size: 85px;
+    font-size: 65px;
     width: 600px;
-    line-height: 0.8;
+    line-height: 0.9;
+    margin-top: 25px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1092px) {
     .header__texto {
         font-size: 150px;
         line-height: 1;
@@ -128,24 +135,52 @@ a {
 }
 
 .header__flecha {
-    width: 150px; 
-    margin-top: -150px;
+    display: none;
+}
+
+@media screen and (min-width: 1092px) {
+    .header__flecha {
+        width: 150px; 
+        margin-top: -150px;
+    }
 }
 
 .header__boton {
-    margin-top: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1092px) {
+    .header__boton {
+        margin-top: 5px;
+        display: block;
+    }
 }
 
 .header__botoncontenedor {
     width: 250px;
+    margin-top: 20px;
+    
 }
 
 /* Menú */
 .nav {
-    margin-top: 125px;
+    margin-top: 35px;
     font-size: 24px;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+@media screen and (min-width: 1092px) {
+    .nav {
+        margin-top: 125px;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 
 .nav__enlace {
