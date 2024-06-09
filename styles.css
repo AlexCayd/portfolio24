@@ -25,6 +25,10 @@ h1, h2, h3 {
     font-weight: 400;
 }
 
+h2 {
+    font-size: 64px;
+}
+
 a {
     color: var(--negro);
     text-decoration: none;
@@ -118,7 +122,6 @@ a {
     align-items: center; 
 }
 
-
 .header__texto {
     font-size: 65px;
     width: 600px;
@@ -179,7 +182,7 @@ a {
 
 @media screen and (min-width: 1092px) {
     .nav {
-        margin-top: 125px;
+        margin-top: 100px;
         display: flex;
         justify-content: space-evenly;
     }
@@ -222,4 +225,40 @@ a {
     .nav__separador {
         display: block;
     }
+}
+
+/* About Me */
+.aboutme {
+    background-color: var(--negro);
+    color: var(--blanco);
+    margin-top: 75px;
+    padding: 100px 0;
+}
+
+.aboutme__maincontenedor {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.aboutme__capas {
+    width: 85px;
+}
+
+.aboutme__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 150px;
+    row-gap: 50px;
+}
+
+.aboutme__profile {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.aboutme__texto {
+    font-size: 24px;
 }
