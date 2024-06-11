@@ -730,3 +730,122 @@ img {
         display: none;
     }
 }
+
+/* Dime Que Hay */
+.dqh {
+    background-color: var(--gris);
+    padding: 100px 0 50px 0;
+}
+
+.dqh__contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .dqh__contenedor {
+        grid-template-columns: 5fr 3fr;
+    }
+}
+
+.dqh__titulo {
+    font-family: var(--fuenteGeneral);
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+@media screen and (min-width: 768px) {
+    .dqh__titulo {
+        font-size: 54px;
+    }
+}
+
+.dqh__tag {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 60px;
+    border: 1px solid var(--negro);
+    border-radius: 50px;
+    margin-top: 35px;
+    transition: 0.5s all;
+}
+
+.dqh__tag:hover {
+    border-radius: 0px;
+}
+
+.dqh__bloque {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 75px;
+    padding: 0 30px;
+    margin-top: 75px;
+}
+
+@media screen and (min-width: 768px) {
+    .dqh__bloque {
+        padding: 0 200px;
+    }
+}
+
+.dqh__num {
+    font-size: 54px;
+    margin-top: -15px;
+    transition: transform 0.5s;
+}
+
+.dqh__num:hover {
+    transform: scale(1.02);
+}
+
+.dqh__bloquetitulo {
+    font-size: 32px;
+    font-family: var(--fuenteTitulos);
+    margin-bottom: 20px;
+}
+
+.dqh__bloquetitulo {
+    display: inline-block;
+    position: relative;
+}
+
+.dqh__bloquetitulo::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--negro); 
+    transition: width 0.5s; 
+}
+
+@media screen and (min-width: 768px) {
+    .dqh__bloquetitulo::before {
+        width: 0%;
+        bottom: -5px;
+    }
+}
+
+.dqh__bloquetitulo:hover::before {
+    width: 100%;
+}
+
+
+.dqh__img {
+    transition: transform 0.5s;
+}
+
+.dqh__img:hover {
+    transform: scale(1.02) rotate(2deg);
+}
+
+.dqh__contenedorboton {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
