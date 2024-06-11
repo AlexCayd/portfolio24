@@ -334,7 +334,13 @@ img {
 
 /* Proyectos */
 .proyectos {
-    padding: 100px 0;
+    padding: 75px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .proyectos {
+        padding: 100px 0;
+    }
 }
 
 .proyectos__titulocontenedor {
@@ -345,6 +351,13 @@ img {
 .proyectos__titulo {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+    .proyectos__titulo {
+        margin-bottom: 0;
+    }
 }
 
 .proyectos__titulocontenedor::before {
