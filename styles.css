@@ -145,6 +145,14 @@ img {
 
 @media screen and (min-width: 1092px) {
     .header__texto {
+        font-size: 120px;
+        line-height: 1;
+        margin-top: -20px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .header__texto {
         font-size: 150px;
         line-height: 1;
         margin-top: -20px;
@@ -153,6 +161,21 @@ img {
 
 .header__flecha {
     display: none;
+    animation: flechaDerecha 2s infinite; 
+}
+
+.header__flecha:hover {
+    transform: translateX(20px);
+
+}
+
+@keyframes flechaDerecha {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
 }
 
 @media screen and (min-width: 1092px) {
@@ -160,6 +183,13 @@ img {
         display: block;
         width: 150px; 
         margin-top: -150px;
+        margin-left: -175px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .header__flecha {
+        margin-left: 0;
     }
 }
 
@@ -172,14 +202,19 @@ img {
 
 @media screen and (min-width: 1092px) {
     .header__boton {
-        margin-top: 5px;
+        margin-top: 0px;
         display: block;
-        font-size: 24px;
     }
 }
 
 .header__btn {
-    font-size: 24px;
+    font-size: 18px;
+}
+
+@media (min-width: 1400px) {
+    .header__btn {
+        font-size: 24px;
+    }
 }
 
 .header__botoncontenedor {
@@ -188,6 +223,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 105px;
 }
 
 /* Menú */
@@ -214,7 +250,7 @@ img {
     padding: 0 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1400px) {
     .nav__enlace {
         font-size: 24px;
         padding: 0;
@@ -284,7 +320,19 @@ img {
     display: block;
     width: 60px;
     margin-top: 45px;
+    height: 100px;
+    animation: pulsar 4s infinite ease-in-out;
 }
+
+@keyframes pulsar {
+    0%, 100% {
+        height: 100px;
+    }
+    50% {
+        height: 130px;
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     .aboutme__capas {
@@ -326,7 +374,7 @@ img {
     font-size: 16px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1400px) {
     .aboutme__texto {
         font-size: 20px;
     }
@@ -384,7 +432,7 @@ img {
     font-size: 16px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1400px) {
     .tags__subtitulo {
         font-size: 20px;
     }
@@ -393,6 +441,15 @@ img {
 .tags__img {
     width: 100px;
     margin-top: 50px;
+    transition: transform 1s;
+}
+
+.tags__img {
+    animation: rotarCirculos 5s infinite;
+}
+
+.tags__img:hover {
+    animation: rotarCirculos 5s infinite; 
 }
 
 @media screen and (min-width: 768px) {
@@ -402,11 +459,20 @@ img {
     }
 }
 
+@keyframes rotarCirculos {
+    0%, 100% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-20px) translateY(20px) rotate(180deg);
+    }
+}
+
 .tags__grid {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 10px;
     text-align: center;
 }
 
@@ -414,7 +480,7 @@ img {
     .tags__grid {
         margin-top: 100px;
         grid-template-columns: repeat(3, 1fr);
-        gap: 50px 150px;
+        gap: 50px 125px;
     }
 }
 
@@ -423,7 +489,7 @@ img {
     justify-content: center;
     align-items: center;
     padding: 15px 40px;
-    height: 120px;
+    height: 50px;
     border: 1px solid var(--negro);
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -432,12 +498,16 @@ img {
     z-index: 1;
     background: linear-gradient(90deg, transparent 50%, var(--blanco) 50%);
     background-size: 200%;
+    font-size: 12px;
 }
 
 @media screen and (min-width: 768px) {
     .tags__tag {
-        padding: 25px 75px;
+        padding: 15px 50px;
+        width: 75%;
+        margin: 0 auto;
         height: auto;
+        font-size: 14px;
     }
 }
 
@@ -463,11 +533,6 @@ img {
 .tags__tag:hover::before {
     background-color: rgba(255, 255, 255, 0); 
 }
-
-.tags__tag:hover span {
-    transition: transform 0.3s ease;
-}
-
 
 /* Proyectos */
 .proyectos {
@@ -521,9 +586,23 @@ img {
 
 
 .proyectos__flecha {
-    display: none;
     height: 150px;
+    animation: flechaAbajo 2s infinite; 
 }
+
+.proyectos__flecha:hover {
+    transform: translateY(25px);
+}
+
+@keyframes flechaAbajo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     .proyectos__flecha {
