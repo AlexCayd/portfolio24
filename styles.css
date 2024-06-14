@@ -1024,7 +1024,7 @@ img {
 .cursos__contenedor {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 100px;
+    gap: 35px;
     align-items: center;
 }
 
@@ -1035,6 +1035,7 @@ img {
 @media screen and (min-width: 768px) {
     .cursos__contenedor {
         grid-template-columns: 4fr 5fr;
+        gap: 100px;
     }
 
     .cursos__imagenes {
@@ -1379,6 +1380,13 @@ img {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .experiencia__banda {
+        display: block;
+    }
 }
 
 .experiencia__banda--1 .experiencia__logos {
@@ -1393,7 +1401,7 @@ img {
 }
 
 .experiencia__logo {
-    height: 150px; 
+    height: 200px; 
     filter: grayscale(100%); 
     transition: filter 0.5s ease;
 }
@@ -1417,9 +1425,23 @@ img {
     }
 }
 
+.experiencia__logoscontenedor {
+    margin-top: 45px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .experiencia__logoscontenedor {
+        display: none;
+    }
+}
+
 /* Footer */
 .footer {
-    padding: 150px 0 200px 0;
+    padding: 150px 0 150px 0;
     background-color: var(--negro);
     color: var(--blanco);
 }
@@ -1427,6 +1449,10 @@ img {
 .footer__nombre {
     font-family: var(--fuenteTitulos);
     font-size: 32px;
+}
+
+.footer__numero {
+    color: var(--blanco);
 }
 
 .footer__datos {
