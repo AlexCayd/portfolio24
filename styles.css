@@ -1380,8 +1380,7 @@ img {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    /* display: none; */
-    display: block;
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -1427,27 +1426,18 @@ img {
 }
 
 .experiencia__logoscontenedor {
-    display: none;
-}
-
-/*
-.experiencia__logoscontenedor {
     margin-top: 45px;
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
 }
-*/
 
-/*
 @media screen and (min-width: 768px) {
     .experiencia__logoscontenedor {
         display: none;
     }
 }
-
-*/
 
 /* Footer */
 .footer {
