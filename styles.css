@@ -381,9 +381,18 @@ img {
     overflow: hidden;
 }
 
-.aboutme__imagecontenedor:hover .aboutme__profile{
-    transform: scale(1.05) rotate(5deg);
+.aboutme__imagecontenedor .aboutme__profile {
+    filter: grayscale(100%); 
+    transition: filter 0.3s ease; 
+    transform: rotate(-2deg);
+    transition: .8s all;
 }
+
+.aboutme__imagecontenedor:hover .aboutme__profile {
+    filter: grayscale(0%); 
+    transform: scale(1.03) rotate(0deg);
+}
+
 
 .aboutme__texto {
     font-size: 16px;
@@ -1531,9 +1540,15 @@ img {
 
 .footer__redes {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .footer__img {
-    width: 50px;
+    width: 40px;
+    filter: invert(100%) brightness(100%);
+    transition: .3s ease-in-out;
+}
+
+.footer__img:hover {
+    filter: invert(60%) brightness(100%);
 }
