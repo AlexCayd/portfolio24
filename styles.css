@@ -82,7 +82,7 @@ img {
     inset: 0 8px;
     border-left: 2px solid var(--negro);
     border-right: 2px solid var(--negro);
-    transition: 1s;
+    transition: 0.6s;
 }
 
 .boton::after {
@@ -272,7 +272,7 @@ img {
     bottom: -10px;
     left: 0;
     width: 0%;
-    height: 3px;
+    height: 1px;
     background-color: var(--negro); 
     transition: width .5s; 
 }
@@ -1129,7 +1129,7 @@ img {
     bottom: -10px;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: var(--negro); 
     transition: width 0.5s; 
 }
