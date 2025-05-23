@@ -63,7 +63,7 @@ img {
 
 .boton {
     padding: 15px 40px;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     color: var(--negro);
     position: relative;
@@ -559,18 +559,11 @@ img {
     }
 }
 
-.tags__contenedor {
-    max-width: 80%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
 .tags__grid {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px 30px;
+    gap: 20px;
     text-align: center;
 }
 
@@ -586,8 +579,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 20px;
-    height: 25px;
+    padding: 10px 25px;
+    height: 30px;
     border: 1px solid var(--negro);
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -668,20 +661,21 @@ img {
     }  
 }
 
-.proyectos__titulocontenedor::before {
-    content: '';
-    position: absolute;
-    bottom: 85px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--negro); 
-    transition: width .8s; 
-}
 
 @media screen and (min-width: 768px) {
     .proyectos__titulocontenedor::before {
         bottom: -10px;
+    }
+
+    .proyectos__titulocontenedor::before {
+        content: '';
+        position: absolute;
+        bottom: 85px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--negro); 
+        transition: width .8s; 
     }
 }
 
@@ -725,18 +719,21 @@ img {
 .proyectos__imagenes {
     margin-top: 45px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .proyectos__imagenes {
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 }
 
-.proyectos__image:nth-child(1) {
-    grid-column: 1 / 3;
+@media screen and (min-width: 768px) {
+  .proyectos__image:nth-child(1) {
+        grid-column: 1 / 3;
+    }
 }
 
 
@@ -1066,10 +1063,139 @@ img {
     }
 }
 
+/* MTS */
+.mts {
+    padding-top: 75px;
+    background-image: url(img/mts/mtsbg.png);
+    background-position: bottom center;
+}
+
+.mts__titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mts__txt {
+    font-size: 36px;
+}
+
+@media screen and (min-width: 768px) {
+    .mts__txt {
+        font-size: 48px;
+    }
+}
+
+.mts__rombos {
+    height: 100px;
+    animation: absorberExpandir 10s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+    transform-origin: center;
+    display: block;
+    opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) {
+  .mts__rombos {
+    height: 150px;
+  }
+}
+
+@keyframes absorberExpandir {
+    0% {
+        transform: scale(1) skew(0deg, 0deg);
+        opacity: 0.9;
+    }
+    25% {
+        transform: scale(0.85, 1.05) skew(2deg, -2deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.15, 0.9) skew(-2deg, 2deg);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(0.9, 1.1) skew(1deg, -1deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1) skew(0deg, 0deg);
+        opacity: 0.9;
+    }
+}
+
+.mts__tag {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 60px;
+    border: 1px solid var(--negro);
+    border-radius: 50px;
+    margin: 30px 0;
+    transition: 0.5s all;
+}
+
+@media screen and (min-width: 768px) {
+    .mts__tag {
+        margin-top: 35px;
+    }
+}
+
+.mts__tag:hover {
+    border-radius: 0px;
+}
+
+.mts__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: top 0%;
+}
+
+@media screen and (min-width: 768px) {
+    .mts__image {
+        margin-top: 20px;
+    }
+}
+
+.mts__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 30px 0;
+}
+
+.mts__texto span {
+    font-weight: normal;
+}
+
+.mts__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.mts__oxford {
+    height: 80px;
+}
+
+@media screen and (min-width: 768px) {
+    .mts__oxford {
+        height: 100px;
+    }
+}
+
+.mts__btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 /* Cursos */
 
 .cursos {
     padding: 100px 0 50px 0;
+    background-image: url(img/cursos/cursosbg.png);
 }
 
 .cursos__contenedor {
@@ -1079,14 +1205,10 @@ img {
     align-items: center;
 }
 
-.cursos__imagenes {
-    grid-row: 2 / 3;
-}
-
 @media screen and (min-width: 768px) {
     .cursos__contenedor {
-        grid-template-columns: 4fr 5fr;
-        gap: 100px;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
     }
 
     .cursos__imagenes {
@@ -1125,21 +1247,14 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 50px;
-    padding: 0 30px;
-    margin-top: 60px;
+    gap: 30px;
+    margin-top: 50px;
 }
 
 @media screen and (min-width: 768px) {
     .cursos__bloque {
-        gap: 75px;
-        padding: 0 50px;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    .cursos__bloque {
-        padding: 0 100px;
+        gap: 50px;
+        margin: 50px 0;
     }
 }
 
@@ -1188,7 +1303,7 @@ img {
 
 .cursos__btn {
     margin-top: 25px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .cursos__image {
@@ -1290,6 +1405,10 @@ img {
 }
 
 
+.cursos__titulo {
+    font-size: 48px;
+}
+
 /* Experiencia */
 .experiencia {
     padding: 100px 0 100px 0;
@@ -1390,9 +1509,15 @@ img {
 
 /* Footer */
 .footer {
-    padding: 150px 0 150px 0;
+    padding: 75px 0;
     background-color: var(--negro);
     color: var(--blanco);
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 100px 0;
+    }
 }
 
 .footer__nombre {
@@ -1405,7 +1530,7 @@ img {
 }
 
 .footer__datos {
-    margin: 100px 0;
+    margin: 80px 0;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 50px;
@@ -1437,7 +1562,7 @@ img {
     width: 100%;
     height: 3px;
     background-color: var(--blanco); 
-    transition: width .5s; 
+    transition: width .8s; 
 }
 
 @media screen and (min-width: 768px) {
@@ -1464,7 +1589,7 @@ img {
 
 .footer__boton {
     color: var(--blanco);
-    padding: 20px 70px;
+    padding: 10px 70px;
     border: 2px solid var(--blanco);
     font-size: 18px;
     border-radius: 50px;
