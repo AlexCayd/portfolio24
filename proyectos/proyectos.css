@@ -1,0 +1,30 @@
+body.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade.loaded {
+  opacity: 1;
+}
+
+.headerproyecto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    border-bottom: 3px solid #f1f1f1;
+}
+
+.headerproyecto__back {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headerproyecto__flecha {
+    height: 40px;
+    transform: rotate(180deg);
+}
+
+
+

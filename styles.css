@@ -110,6 +110,16 @@ img {
     transform: skewX(15deg);
 }
 
+body.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade.loaded {
+  opacity: 1;
+}
+
+
 /* Header */
 @media screen and (min-width: 1092px) {
     .header__contenedor {
@@ -234,11 +244,6 @@ img {
     font-size: 16px;
 }
 
-@media (min-width: 1400px) {
-    .header__btn {
-        font-size: 24px;
-    }
-}
 
 .header__botoncontenedor {
     width: 250px;
