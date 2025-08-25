@@ -68,21 +68,21 @@ body.fade.loaded {
 }
 
 .principalproyecto__tags {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
     .principalproyecto__tags {
-        gap: 15px;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
     } 
 }
 
 .principalproyecto__tag {
     font-size: 12px;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 5px 20px;
     border-radius: 25px;
     border: 3px solid var(--gris);
 }
